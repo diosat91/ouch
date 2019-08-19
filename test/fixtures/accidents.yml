@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  injury: one
+  description: MyText
+  occurrence_date: 2019-08-19
+  recovery_date: 2019-08-19
+  sport: MyString
+
+two:
+  user: two
+  injury: two
+  description: MyText
+  occurrence_date: 2019-08-19
+  recovery_date: 2019-08-19
+  sport: MyString
