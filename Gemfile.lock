@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/ctran/annotate_models.git
+  revision: 111640d077836ced23cfffb882c93e40968ab9d9
+  specs:
+    annotate (2.7.5)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 13.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -77,7 +85,7 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
-    devise (4.7.0)
+    devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -226,10 +234,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  devise
+  devise (>= 4.7.1)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   pg

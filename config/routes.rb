@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-	root to: "home#root_page"
+	root to: "dashboard/accidents#index"
 
 
 	namespace :dashboard do

@@ -1,0 +1,20 @@
+<%= simple_form_for [:dashboard, @accident] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+		<%= f.input :occurrence_date %>
+		<%= f.input :recovery_date %>
+		<%= f.input :description %>
+		<%= f.input :sport %>
+
+	  <%= f.fields_for :injury do |i| %>
+	    <%= i.input :body_part %>
+			<%= i.input :problem %>
+		<% end %>
+			
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
