@@ -1,0 +1,25 @@
+<section id="hero">
+  <div class="logo-wrapper">
+    <%= render partial: "shared/x_rays.html.erb" %>
+    <%= render partial: "shared/logo.html.erb" %>
+  </div>
+  <p>
+    Where does it hurt?
+  </p>
+  <div class="button-wrapper">
+    <%= link_to "Sign in", new_user_session_path, class: 'btn-outline' %>
+    <%= link_to "Sign up", new_user_registration_path, class: 'btn-regular' %>
+
+  </div>
+  <div class="scroll-down-wrapper">
+    <a href="#" class="scroll-down-button">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </div>
+</section>
+
+<% content_for :after_js do %>
+  <script>
+    document.querySelector('.scroll-down-button').dataset.target.scrollIntoView({behavior: 'smooth'}, center: 'top')
+  </script>
+<% end %>
