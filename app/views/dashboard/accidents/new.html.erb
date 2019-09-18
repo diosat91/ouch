@@ -2,14 +2,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-		<%= f.input :occurrence_date %>
-		<%= f.input :recovery_date %>
+		<%= f.date_select :occurrence_date, as: :string, label: 'Date of occurence', as: :date, input_html: {type: :date} %>
 		<%= f.input :description %>
 		<%= f.input :sport %>
-
 	  <%= f.fields_for :injury do |i| %>
 	    <%= i.input :body_part %>
 			<%= i.input :problem %>
+			<%= i.input :estimated_recovery_time, label: 'Estimated number of days of recovery' %>
 		<% end %>
 			
   </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_202052) do
+ActiveRecord::Schema.define(version: 2019_09_18_193355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2019_08_19_202052) do
     t.bigint "user_id", null: false
     t.bigint "injury_id", null: false
     t.text "description"
-    t.date "occurrence_date"
-    t.date "recovery_date"
+    t.datetime "occurrence_date"
+    t.datetime "recovery_date"
     t.string "sport"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
