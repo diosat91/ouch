@@ -1,4 +1,14 @@
-<h1>You have reached the homepage. Sorry I haven't built it yet.</h1>
+<h1>Injuries overview</h1>
 
 
-<%= @accidents.count %>
+<%= @accidents.each do |accident| %>
+  <%= link_to "#{accident.injury.body_part} #{accident.injury.problem}", dashboard_accident_path(accident) %>
+	<br>
+  <%= link_to "Delete", dashboard_accident_path(accident), method: :delete %>
+<% end %>
+
+<br>
+
+<%= link_to "Log new injury", new_dashboard_accident_path %>
+
+
