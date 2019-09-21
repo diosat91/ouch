@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ouch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#F2A6A6"/>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <title>
+      Ouch - Where does it hurt?
+    </title>
+
+    <%= favicon_link_tag 'favicon.png' %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/05ada18386.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <% if content_for?(:after_js) %>
+      <%= yield :after_js %>
+    <% end %>
   </body>
 </html>

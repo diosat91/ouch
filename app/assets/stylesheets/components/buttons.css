@@ -1,0 +1,59 @@
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.button-wrapper a:first-child {
+  margin-right: 20px;
+}
+
+.btn-outline {
+  color: var(--pink);
+  text-decoration: none;
+  font-size: 18px;
+  width: 130px;
+  display: inline-block;
+  background-color: transparent;
+  padding: 5px 0px;
+  text-align: center;
+  border: 1px solid var(--green);
+}
+
+.btn-regular {
+  color: var(--pink);
+  text-decoration: none;
+  font-size: 18px;
+  width: 130px;
+  display: inline-block;
+  background-color: var(--green);
+  padding: 5px 0px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.scroll-down-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-down-button {
+  font-size: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+  color: var(--green);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.scroll-down-button i {
+  height: 15px;
+}
