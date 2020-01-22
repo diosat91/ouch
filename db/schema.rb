@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_18_193355) do
+ActiveRecord::Schema.define(version: 2019_09_22_143440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2019_09_18_193355) do
     t.bigint "user_id", null: false
     t.bigint "injury_id", null: false
     t.text "description"
-    t.datetime "occurrence_date"
-    t.datetime "recovery_date"
+    t.date "occurrence_date"
+    t.date "recovery_date"
     t.string "sport"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -36,13 +36,13 @@ ActiveRecord::Schema.define(version: 2019_09_18_193355) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "participants", force: :cascade do |t|
+  create_table "memberships", force: :cascade do |t|
     t.bigint "team_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["team_id"], name: "index_participants_on_team_id"
-    t.index ["user_id"], name: "index_participants_on_user_id"
+    t.index ["team_id"], name: "index_memberships_on_team_id"
+    t.index ["user_id"], name: "index_memberships_on_user_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -69,6 +69,6 @@ ActiveRecord::Schema.define(version: 2019_09_18_193355) do
 
   add_foreign_key "accidents", "injuries"
   add_foreign_key "accidents", "users"
-  add_foreign_key "participants", "teams"
-  add_foreign_key "participants", "users"
+  add_foreign_key "memberships", "teams"
+  add_foreign_key "memberships", "users"
 end

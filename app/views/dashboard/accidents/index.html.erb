@@ -1,6 +1,5 @@
 <h1>Injuries overview</h1>
 
-
 <%= @accidents.each do |accident| %>
   <%= link_to "#{accident.injury.body_part} #{accident.injury.problem}", dashboard_accident_path(accident) %>
 	<br>

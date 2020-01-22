@@ -1,1 +1,8 @@
 <%= link_to "Edit this injury", edit_dashboard_accident_path %>
+
+<h1><%= @accident.injury.body_part %> <%= @accident.injury.problem %></h1>
+
+<h4>Accident experienced by: <%= @accident.user.first_name %></h4>
+
+<h4>Estimated recovery time: <%= @accident.injury.estimated_recovery_time %> days</h4>
+

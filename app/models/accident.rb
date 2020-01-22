@@ -4,8 +4,8 @@ class Accident < ApplicationRecord
 
   accepts_nested_attributes_for :injury, allow_destroy: true
 
-  validates_presence_of :occurrence_date, :sport
-  validate :occurrence_date_not_in_future, on: :create
+  # validates_presence_of :occurrence_date, :sport
+  # validate :occurrence_date_not_in_future, on: :create
   
   # SETTERS::start
 
