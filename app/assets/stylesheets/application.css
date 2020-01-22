@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+@import "config/colors";
+@import "config/fonts";
 
-@import 'config/colors';
-@import 'config/fonts';
+body {
+  background-color: var(--orange);
+}
