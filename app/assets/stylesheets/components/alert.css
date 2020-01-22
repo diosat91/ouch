@@ -1,0 +1,24 @@
+.alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert button {
+  border: none;
+  background-color: transparent;
+}
+
+.alert-info {
+  background-color: var(--green);
+}
+
+.alert-warning {
+  background-color: var(--pink);
+}

@@ -10,28 +10,42 @@
   margin-right: 20px;
 }
 
+.button-wrapper a {
+  width: 130px;
+  padding: 5px 10px;
+}
+
 .btn-outline {
   color: var(--pink);
+  background-color: transparent;
   text-decoration: none;
   font-size: 18px;
-  width: 130px;
   display: inline-block;
-  background-color: transparent;
   padding: 5px 0px;
   text-align: center;
   border: 1px solid var(--green);
 }
 
+.btn-outline:hover {
+  color: var(--pink);
+  background-color: transparent;
+}
+
 .btn-regular {
   color: var(--pink);
+  background-color: var(--green);
   text-decoration: none;
   font-size: 18px;
   padding: 10px 15px;
   margin: 10px 0;
   display: inline-block;
-  background-color: var(--green);
   text-align: center;
   border: 1px solid transparent;
+}
+
+.btn-regular:hover {
+  color: var(--pink);
+  background-color: var(--green);
 }
 
 .scroll-down-wrapper {
