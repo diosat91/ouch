@@ -4,7 +4,7 @@ class Dashboard::AccidentsController < ApplicationController
   before_action :set_accident, only: [:edit, :update, :show, :destroy]
 
   def index
-    @accidents = Accident.all
+    @accidents = Accident.all.includes(:injury)
   end
 
   def show
@@ -39,12 +39,12 @@ class Dashboard::AccidentsController < ApplicationController
     else
       render :edit
     end
-
   end
 
   def destroy
     @accident = Accident.find(params[:id])
     @accident.destroy
+    redirect_to root_path
   end
 
   def set_accident

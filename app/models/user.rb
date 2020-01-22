@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :accidents
+  has_many :participants #naming?
+  has_many :teams, through: :participants
 
 
 end
