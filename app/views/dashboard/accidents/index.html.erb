@@ -2,7 +2,7 @@
 
 <%= @accidents.each do |accident| %>
   <%= link_to "#{accident.injury.body_part} #{accident.injury.problem}", dashboard_accident_path(accident) %>
-	<br>
+  <br>
   <%= link_to "Delete", dashboard_accident_path(accident), method: :delete %>
 <% end %>
 

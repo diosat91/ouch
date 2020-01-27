@@ -1,0 +1,10 @@
+<%= link_to "Edit this team", edit_dashboard_team_path %>
+
+<h1><%= @team.name %></h1>
+<h1><%= @team.description %></h1>
+
+<h4>Team members: </h4>
+
+<% @team.users.each do |user| %>
+	<%= user.full_name %>
+<% end %>

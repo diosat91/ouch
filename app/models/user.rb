@@ -5,8 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :accidents
-  has_many :participants #naming?
-  has_many :teams, through: :participants
+  has_many :memberships
+  has_many :teams, through: :memberships
 
+  validates :first_name, :last_name, :email, presence: true
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
