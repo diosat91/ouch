@@ -18,6 +18,8 @@ gem 'jbuilder', '~> 2.7'
 gem "devise", ">= 4.7.1"
 gem 'simple_form'
 gem 'annotate', github: 'ctran/annotate_models'
+gem 'faker'
+gem 'ruby-progressbar'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
