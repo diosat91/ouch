@@ -68,6 +68,10 @@
   text-decoration: none;
 }
 
+.scroll-down-button:hover {
+  color: var(--green);
+}
+
 .scroll-down-button i {
   height: 15px;
 }

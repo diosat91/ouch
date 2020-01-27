@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start();
-require("turbolinks").start();
 require("channels");
 import "bulma/css/bulma.css";
 
@@ -14,3 +13,12 @@ import "bulma/css/bulma.css";
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+document.addEventListener("DOMContentLoaded", event => {
+  document.querySelectorAll(".alert").forEach(item => {
+    item.addEventListener("click", event => {
+      event.preventDefault();
+      event.currentTarget.remove();
+    });
+  });
+});

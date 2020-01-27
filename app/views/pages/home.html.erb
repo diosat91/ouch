@@ -12,7 +12,7 @@
 
   </div>
   <div class="scroll-down-wrapper">
-    <a href="#" class="scroll-down-button">
+    <a href="#" class="scroll-down-button" data-target="#hero">
       <i class="fas fa-chevron-down"></i>
     </a>
   </div>
@@ -20,6 +20,6 @@
 
 <% content_for :after_js do %>
   <script>
-    document.querySelector('.scroll-down-button').dataset.target.scrollIntoView({behavior: 'smooth'}, center: 'top')
+      document.querySelector(document.querySelector('.scroll-down-button').dataset.target).scrollIntoView({behavior: 'smooth'})
   </script>
 <% end %>
