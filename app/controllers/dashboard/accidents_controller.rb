@@ -1,7 +1,7 @@
-# frozen_string_literal: true
-
 class Dashboard::AccidentsController < ApplicationController
   before_action :set_accident, only: [:edit, :update, :show, :destroy]
+  layout 'layouts/with_sidebar'
+
 
   def index
     @accidents = Accident.all.includes(:injury)

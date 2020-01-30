@@ -3,9 +3,12 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import { activateAlert } from "../components/alert";
+import { activateDropdown } from "../components/dropdown";
+import { activateDatepicker } from "../components/datepicker";
+
 require("@rails/ujs").start();
 require("channels");
-import "bulma/css/bulma.css";
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -15,10 +18,7 @@ import "bulma/css/bulma.css";
 // const imagePath = (name) => images(name, true)
 
 document.addEventListener("DOMContentLoaded", event => {
-  document.querySelectorAll(".alert").forEach(item => {
-    item.addEventListener("click", event => {
-      event.preventDefault();
-      event.currentTarget.remove();
-    });
-  });
+  activateAlert();
+  activateDatepicker();
+  activateDropdown();
 });

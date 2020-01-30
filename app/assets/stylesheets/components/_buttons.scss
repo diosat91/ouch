@@ -75,3 +75,21 @@
 .scroll-down-button i {
   height: 15px;
 }
+
+.floating-action-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--purple);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-action-button:hover {
+  color: white;
+}

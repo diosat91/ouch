@@ -12,6 +12,9 @@
  *
  */
 
+@import "bulma/bulma.sass";
+@import "bulma-calendar/dist/css/bulma-calendar.min.css";
+
 //  CONFIG
 @import "config/colors";
 @import "config/fonts";
@@ -26,11 +29,6 @@ html {
 
 body {
   background-color: var(--orange);
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 a {

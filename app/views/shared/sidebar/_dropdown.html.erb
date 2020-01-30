@@ -1,0 +1,25 @@
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="avatar-dropdown" aria-haspopup="true" aria-controls="dropdown-menu">
+      <%= image_tag 'placeholder.png', width: 75, height: 75 %>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <a href="#" class="dropdown-item">
+        Dropdown item
+      </a>
+      <a class="dropdown-item">
+        Other dropdown item
+      </a>
+      <a href="#" class="dropdown-item is-active">
+        Active dropdown item
+      </a>
+      <a href="#" class="dropdown-item">
+        Other dropdown item
+      </a>
+      <hr class="dropdown-divider">
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    </div>
+  </div>
+</div>

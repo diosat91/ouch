@@ -1,4 +1,5 @@
 class Dashboard::TeamsController < ApplicationController
+  layout 'layouts/with_sidebar'
 
   def index
     @teams = Team.all

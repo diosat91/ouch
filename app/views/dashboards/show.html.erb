@@ -1,11 +1,15 @@
 THIS IS THE DASHBOARD
-
 <div class="accident-graph"><%= @accidents %></div>
-
-<% @teams.each do |team| %>
-  <%= link_to "#{team.name}", dashboard_team_path(team), class: 'btn-regular' %>
-	<!-- <br> -->
-  <%= link_to "Delete", dashboard_team_path(team), method: :delete , class: 'btn-outline'%>
-<% end %>
-
+<ul>
+  <% @teams.each do |team| %>
+    <li>
+      <%= link_to "#{team.name}", dashboard_team_path(team), class: 'btn-regular' %>
+      <!-- <br> -->
+      <%= link_to "Delete", dashboard_team_path(team), method: :delete , class: 'btn-outline'%>
+    </li>
+  <% end %>
+</ul>
 <%= link_to "Create a new team", new_dashboard_team_path %>
+<%= link_to new_dashboard_accident_path, class: "floating-action-button" do %>
+  <i class="fa fa-plus"></i>
+<% end %>
