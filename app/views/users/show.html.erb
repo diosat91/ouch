@@ -1,0 +1,22 @@
+<%= link_to "Edit your profile", edit_user_path(@user) %>
+
+<h1>Name: <%= @user.full_name %></h1>
+<h1>Email: <%= @user.email %></h1>
+<br>
+
+<h2>Teams you are a member of: </h2>
+<br>
+<ul>
+<% @user.teams.each do |team| %>
+	<li><%= link_to team.name, dashboard_team_path(team)%></li>
+<% end %>
+</ul>
+<br>
+<h2>Your injuries: </h2>
+<br>
+
+<ul>
+<% @user.injuries.each do |injury| %>
+	<li><%= injury.body_part %> <%= injury.problem %></li>
+<% end %>
+</ul>

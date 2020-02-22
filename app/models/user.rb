@@ -29,6 +29,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :accidents, dependent: :destroy
+  has_many :injuries, through: :accidents
   has_many :memberships, dependent: :destroy
   has_many :teams, through: :memberships
 

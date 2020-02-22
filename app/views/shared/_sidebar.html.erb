@@ -3,6 +3,11 @@
     <%= link_to dashboard_path do  %>
       <%= render partial: "shared/logo" %>
     <% end %>
+    <%= link_to user_path(current_user) do  %>
+      <button class="avatar-dropdown" aria-haspopup="true" aria-controls="dropdown-menu">
+        <%= image_tag 'placeholder.png', width: 75, height: 75 %>
+      </button>
+    <% end %>
     <%= render partial: "shared/sidebar/dropdown" %>
   </div>
   <div class="sidebar-content">

@@ -1,10 +1,8 @@
-THIS IS THE DASHBOARD
 <div class="accident-graph"><%= @accidents %></div>
 <ul>
   <% @teams.each do |team| %>
     <li>
       <%= link_to "#{team.name}", dashboard_team_path(team), class: 'btn-regular' %>
-      <!-- <br> -->
       <%= link_to "Delete", dashboard_team_path(team), method: :delete , class: 'btn-outline'%>
     </li>
   <% end %>
