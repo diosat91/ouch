@@ -5,9 +5,9 @@
     <%= f.input :description %>
     <%= f.input :sport %>
     <%= f.fields_for :injury do |i| %>
-      <%= i.input :body_part %>
-      <%= i.input :problem %>
       <%= i.input :estimated_recovery_time, label: 'Estimated number of days of recovery' %>
+      <%= i.input :body_part, collection: @accident.injury.body_part_enum %>
+      <%= i.input :problem, collection: @accident.injury.problem_enum %>
     <% end %>
   </div>
   <div class="form-actions">

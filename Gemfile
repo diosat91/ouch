@@ -16,6 +16,7 @@ gem 'webpacker', '~> 4.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 gem "devise", ">= 4.7.1"
+gem 'devise_invitable', '~> 2.0.0'
 gem 'simple_form'
 gem 'annotate', github: 'ctran/annotate_models'
 gem 'faker'

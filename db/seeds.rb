@@ -29,14 +29,14 @@ sports = ["Climbing", "Swimming", "Cycling", "Running", "Skydiving", "Dirtbiking
         activity: sports.shuffle.first
     )
     20.times do
-        name = Faker::Books::Dune.character
-        user = User.create(
+        name = Faker::TvShows::SiliconValley.character
+        user = User.create!(
             first_name: name.split(' ')[0],
             last_name: name.split(' ')[1],
-            email: Faker::Internet.email,
+            email: name.split(' ')[0] + Faker::Internet.email,
             password: 'password',
         )
-        Membership.create(user: user, team: team)
+        Membership.create!(user: user, team: team)
 
         rand(1..5).times do
             injury = Injury.create(
